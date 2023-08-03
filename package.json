@@ -1,14 +1,14 @@
 {
-  "name": "create-nodejs-ts-app",
+  "name": "infinity-kitchen",
   "version": "3.0.10",
-  "description": "Node express mongoose typescript boilerplate",
+  "description": "Infinity Kitchen",
   "main": "dist/index.js",
   "bin": "bin/createNodetsApp.cjs",
-  "repository": "https://github.com/saisilinus/node-express-mongoose-typescript-boilerplate.git",
+  "repository": "https://github.com/athunair20/infinity-kitchen.git",
   "bugs": {
-    "url": "https://github.com/saisilinus/node-express-mongoose-typescript-boilerplate/issues"
+    "url": "https://github.com/athunair20/infinity-kitchen/issues"
   },
-  "author": "linus wafula saisi <saisilinus.work@gmail.com>",
+  "author": "Athul Nair <athul@blueinfinitytech.com>",
   "license": "MIT",
   "type": "module",
   "engines": {
