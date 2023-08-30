@@ -15,7 +15,6 @@ const jwtStrategy = new JwtStrategy(
         throw new Error('Invalid token type');
       }
       const user = await User.findById(payload.sub);
-      // console.log('user passport--------------', user);
       if (!user) {
         return done(null, false);
       }
