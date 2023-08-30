@@ -1,10 +1,10 @@
 import { ExtractJwt, Strategy as JwtStrategy } from 'passport-jwt';
-import tokenTypes from '../token/token.types';
+import tokenTypes from '../staffToken/staffToken.types';
 import config from '../../config/config';
-import User from '../user/user.model';
-import { IPayload } from '../token/token.interfaces';
+import Staff from '../staff/staff.model';
+import { IPayload } from '../staffToken/staffToken.interfaces';
 
-const jwtStrategy = new JwtStrategy(
+const staffJwtStrategy = new JwtStrategy(
   {
     secretOrKey: config.jwt.secret,
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
@@ -14,16 +14,16 @@ const jwtStrategy = new JwtStrategy(
       if (payload.type !== tokenTypes.ACCESS) {
         throw new Error('Invalid token type');
       }
-      const user = await User.findById(payload.sub);
-      // console.log('user passport--------------', user);
-      if (!user) {
+      const staff = await Staff.findById(payload.sub);
+
+      if (!staff) {
         return done(null, false);
       }
-      done(null, user);
+      done(null, staff);
     } catch (error) {
       done(error, false);
     }
   }
 );
 
-export default jwtStrategy;
+export default staffJwtStrategy;

@@ -1,0 +1,13 @@
+import express, { Router } from 'express';
+import { validate } from '../../modules/validate';
+import { staffAuthValidation, staffAuthController } from '../../modules/staffAuth';
+
+const router: Router = express.Router();
+
+router.post('/register', validate(staffAuthValidation.register), staffAuthController.register);
+router.post('/login', validate(staffAuthValidation.login), staffAuthController.login);
+router.post('/change-password', validate(staffAuthValidation.changePassword), staffAuthController.changePassword);
+router.post('/forgot-password', validate(staffAuthValidation.forgotPassword), staffAuthController.forgotPassword);
+router.post('/reset-password', validate(staffAuthValidation.resetPassword), staffAuthController.resetPassword);
+
+export default router;

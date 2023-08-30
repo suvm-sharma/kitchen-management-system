@@ -3,6 +3,13 @@ import authRoute from './auth.route';
 import docsRoute from './swagger.route';
 import userRoute from './user.route';
 import config from '../../config/config';
+import menuCategoriesRoute from './menuCategories.route';
+import menuRoute from './menu.route';
+import staffRoute from './staff.route';
+import roleRoute from './role.route';
+import restaurantRoute from './restaurant.route';
+import menuIngredientsRoute from './menuIngredients.route';
+import staffAuthRoute from './staffAuth.route';
 
 const router = express.Router();
 
@@ -19,6 +26,34 @@ const defaultIRoute: IRoute[] = [
   {
     path: '/users',
     route: userRoute,
+  },
+  {
+    path: '/menuCategories',
+    route: menuCategoriesRoute,
+  },
+  {
+    path: '/menu',
+    route: menuRoute,
+  },
+  {
+    path: '/staff',
+    route: staffRoute,
+  },
+  {
+    path: '/role',
+    route: roleRoute,
+  },
+  {
+    path: '/restaurant',
+    route: restaurantRoute,
+  },
+  {
+    path: '/menuIngredients',
+    route: menuIngredientsRoute,
+  },
+  {
+    path: '/staffAuth',
+    route: staffAuthRoute,
   },
 ];
 

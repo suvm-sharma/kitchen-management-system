@@ -11,6 +11,8 @@ import { NewCreatedUser, UpdateUserBody, IUserDoc, NewRegisteredUser } from './u
  * @returns {Promise<IUserDoc>}
  */
 export const createUser = async (userBody: NewCreatedUser): Promise<IUserDoc> => {
+  console.log('userBody----------', userBody);
+
   if (await User.isEmailTaken(userBody.email)) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Email already taken');
   }
@@ -23,6 +25,8 @@ export const createUser = async (userBody: NewCreatedUser): Promise<IUserDoc> =>
  * @returns {Promise<IUserDoc>}
  */
 export const registerUser = async (userBody: NewRegisteredUser): Promise<IUserDoc> => {
+  // console.log('userBody-------------', userBody);
+
   if (await User.isEmailTaken(userBody.email)) {
     throw new ApiError(httpStatus.BAD_REQUEST, 'Email already taken');
   }
