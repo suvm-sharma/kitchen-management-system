@@ -12,8 +12,5 @@ yarn.lock
 # Code coverage
 coverage
 
-# build folder
-dist
-
 # docker volume
 data
