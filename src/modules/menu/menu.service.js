@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import Menu from './menu.model';
-import { ApiError } from '../errors';
+import Menu from './menu.model.js';
+import { ApiError } from '../errors/index.js';
 import httpStatus from 'http-status';
 
 export const createMenu = async (createMenu) => {

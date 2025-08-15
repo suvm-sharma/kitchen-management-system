@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import { toJSON } from '../toJSON';
-import { paginate } from '../paginate';
+import { toJSON } from '../toJSON/index.js';
+import { paginate } from '../paginate/index.js';
 
 const roleSchema = new mongoose.Schema({
   title: {

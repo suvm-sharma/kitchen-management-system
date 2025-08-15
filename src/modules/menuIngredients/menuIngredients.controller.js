@@ -1,8 +1,8 @@
-import { catchAsync, pick } from '../utils';
-import * as menuIngredientsService from './menuIngredients.service';
+import { catchAsync, pick } from '../utils/index.js';
+import * as menuIngredientsService from './menuIngredients.service.js';
 import httpStatus from 'http-status';
 import mongoose from 'mongoose';
-import { ApiError } from '../errors';
+import { ApiError } from '../errors/index.js';
 
 export const createMenuIngredients = catchAsync(async (req, res) => {
   const menuIngredients = await menuIngredientsService.createMenuIngredients(req.body);

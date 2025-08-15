@@ -1,4 +1,4 @@
-import { ApiError } from '../errors';
+import { ApiError } from '../errors/index.js';
 import httpStatus from 'http-status';
 
 const checkIfHasAccess = (item, staff) => {

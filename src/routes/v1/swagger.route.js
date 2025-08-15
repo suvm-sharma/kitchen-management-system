@@ -1,13 +1,13 @@
 import express from 'express';
 import swaggerJsdoc from 'swagger-jsdoc';
 import swaggerUi from 'swagger-ui-express';
-import swaggerDefinition from '../../modules/swagger/swagger.definition';
+import swaggerDefinition from '../../modules/swagger/swagger.definition.js';
 
 const router = express.Router();
 
 const specs = swaggerJsdoc({
   swaggerDefinition,
-  apis: ['packages/components.yaml', 'dist/routes/v1/*.js'],
+  apis: ['packages/components.yaml', 'routes/v1/*.js'],
 });
 
 router.use('/', swaggerUi.serve);

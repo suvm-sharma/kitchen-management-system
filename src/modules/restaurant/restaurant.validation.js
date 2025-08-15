@@ -1,23 +1,25 @@
 import Joi from 'joi';
-import { objectId } from '../validate';
+import { objectId } from '../validate/index.js';
 
 const createRestaurant = {
-  name: Joi.string().required(),
-  address: Joi.string().required(),
+  name: Joi.string(),
+  address: Joi.string(),
   phone: Joi.number(),
   email: Joi.string(),
-  hoursOfOperation: Joi.array().items(
-    Joi.object({
-      daysOfWork: Joi.string(),
-      openingTime: Joi.string(),
-      closingTime: Joi.string(),
-    })
-  ),
-  location: Joi.array().items({
-    latitude: Joi.string(),
-    longitude: Joi.string(),
-  }),
+  hoursOfOperation: Joi.string(),
+  // hoursOfOperation: Joi.array().items(
+  //   Joi.object({
+  //     daysOfWork: Joi.string(),
+  //     openingTime: Joi.string(),
+  //     closingTime: Joi.string(),
+  //   })
+  // ),
+  // location: Joi.array().items({
+  //   latitude: Joi.string(),
+  //   longitude: Joi.string(),
+  // }),
   // location: Joi.array().items(Joi.string()).required(),
+  location: Joi.string(),
   restaurantImage: Joi.string(),
   logo: Joi.string(),
 };

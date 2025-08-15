@@ -1,14 +1,12 @@
 import httpStatus from 'http-status';
 import mongoose from 'mongoose';
-import catchAsync from '../utils/catchAsync';
-import ApiError from '../errors/ApiError';
-import pick from '../utils/pick';
-import * as userService from './user.service';
+import catchAsync from '../utils/catchAsync.js';
+import ApiError from '../errors/ApiError.js';
+import pick from '../utils/pick.js';
+import * as userService from './user.service.js';
 
 export const createUser = catchAsync(async (req, res) => {
   const user = await userService.createUser(req.body);
-  console.log('user--------------', user);
-
   res.status(httpStatus.CREATED).send(user);
 });
 

@@ -7,16 +7,16 @@ import httpMocks from 'node-mocks-http';
 import moment from 'moment';
 import bcrypt from 'bcryptjs';
 import { jest } from '@jest/globals';
-import app from '../../app';
-import setupTestDB from '../jest/setupTestDB';
-import User from '../user/user.model';
-import config from '../../config/config';
+import app from '../../app.js';
+import setupTestDB from '../jest/setupTestDB.js';
+import User from '../user/user.model.test.js';
+import config from '../../config/config.js';
 import { NewRegisteredUser } from '../user/user.interfaces';
-import * as tokenService from '../token/token.service';
-import tokenTypes from '../token/token.types';
-import Token from '../token/token.model';
-import authMiddleware from './auth.middleware';
-import ApiError from '../errors/ApiError';
+import * as tokenService from '../token/token.service.js';
+import tokenTypes from '../token/token.types.js';
+import Token from '../token/token.model.js';
+import authMiddleware from './auth.middleware.js';
+import ApiError from '../errors/ApiError.js';
 
 setupTestDB();
 

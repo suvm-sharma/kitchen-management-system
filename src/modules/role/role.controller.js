@@ -1,8 +1,8 @@
-import { catchAsync, pick } from '../utils';
-import * as roleService from './role.service';
+import { catchAsync, pick } from '../utils/index.js';
+import * as roleService from './role.service.js';
 import httpStatus from 'http-status';
 import mongoose from 'mongoose';
-import { ApiError } from '../errors';
+import { ApiError } from '../errors/index.js';
 
 export const createRole = catchAsync(async (req, res) => {
   const role = await roleService.createRole(req.body);

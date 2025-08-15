@@ -1,8 +1,7 @@
-import { Request, Response, NextFunction } from 'express';
 import passport from 'passport';
 import httpStatus from 'http-status';
-import ApiError from '../errors/ApiError';
-import Role from '../role/role.model';
+import ApiError from '../errors/ApiError.js';
+import Role from '../role/role.model.js';
 
 const verifyCallback = (req, resolve, reject, requiredRights) => async (err, staff, info) => {
   if (err || info || !staff) {
@@ -34,13 +33,25 @@ const verifyCallback = (req, resolve, reject, requiredRights) => async (err, sta
   resolve();
 };
 
+// const authMiddleware =
+// (...requiredRights) =>
+// async (req, res, next) =>
+//   ((resolve, reject) => {
+//     passport.authenticate('jwt', { session: false }, verifyCallback(req, resolve, reject, requiredRights))(req, res, next);
+//   })
+//     .then(() => next())
+//     .catch((err) => next(err));
+
 const authMiddleware =
-  (...requiredRights) =>
-  async (req, res, next) =>
-    ((resolve, reject) => {
+  (
+    ...requiredRights // ✅ restore higher-order function
+  ) =>
+  async (req, res, next) => {
+    return new Promise((resolve, reject) => {
       passport.authenticate('jwt', { session: false }, verifyCallback(req, resolve, reject, requiredRights))(req, res, next);
     })
       .then(() => next())
       .catch((err) => next(err));
+  };
 
 export default authMiddleware;

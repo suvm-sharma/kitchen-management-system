@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import setupTestDB from '../jest/setupTestDB';
-import { toJSON } from '../toJSON';
-import paginate from './paginate';
+import setupTestDB from '../jest/setupTestDB.js';
+import { toJSON } from '../toJSON/index.js';
+import paginate from './paginate.js';
 
 const projectSchema = new mongoose.Schema({
   name: {

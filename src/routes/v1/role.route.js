@@ -1,7 +1,7 @@
 import express from 'express';
-import { validate } from '../../modules/validate';
-import { roleController, roleValidation } from '../../modules/role/index';
-import { staffAuth } from '../../modules/staffAuth';
+import { validate } from '../../modules/validate/index.js';
+import { roleController, roleValidation } from '../../modules/role/index.js';
+import { staffAuth } from '../../modules/staffAuth/index.js';
 
 const router = express.Router();
 

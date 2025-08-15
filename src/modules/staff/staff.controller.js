@@ -1,8 +1,8 @@
-import { catchAsync, checkIfHasAccess, pick } from '../utils';
-import * as staffService from './staff.service';
+import { catchAsync, checkIfHasAccess, pick } from '../utils/index.js';
+import * as staffService from './staff.service.js';
 import httpStatus from 'http-status';
 import mongoose from 'mongoose';
-import { ApiError } from '../errors';
+import { ApiError } from '../errors/index.js';
 
 export const createStaff = catchAsync(async (req, res) => {
   checkIfHasAccess(req.body, req.staff);

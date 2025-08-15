@@ -1,7 +1,6 @@
-import * as restaurantInterface from './restaurant.interface';
-import restaurant from './restaurant.model';
-import * as restaurantController from './restaurant.controller';
-import * as restaurantService from './restaurant.service';
-import * as restaurantValidation from './restaurant.validation';
+import restaurant from './restaurant.model.js';
+import * as restaurantController from './restaurant.controller.js';
+import * as restaurantService from './restaurant.service.js';
+import * as restaurantValidation from './restaurant.validation.js';
 
-export { restaurantInterface, restaurant, restaurantController, restaurantService, restaurantValidation };
+export { restaurant, restaurantController, restaurantService, restaurantValidation };

@@ -2,11 +2,12 @@
   "name": "infinity-kitchen",
   "version": "3.0.10",
   "description": "Infinity Kitchen",
+  "type": "module",
   "main": "src/index.js",
   "bin": "bin/createNodeApp.cjs",
-  "repository": "https://github.com/suvm-sharma/infinity-kitchen.git",
+  "repository": "https://github.com/suvm-sharma/kitchen-management-system",
   "bugs": {
-    "url": "https://github.com/suvm-sharma/infinity-kitchen/issues"
+    "url": "https://github.com/suvm-sharma/kitchen-management-system"
   },
   "author": "Shubham Kumar <suvmsharma121@gmail.com>",
   "license": "MIT",
@@ -81,6 +82,8 @@
     "supertest": "^6.1.6"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.864.0",
+    "@aws-sdk/s3-request-presigner": "^3.864.0",
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
     "compression": "^1.7.4",
@@ -98,6 +101,7 @@
     "moment": "^2.29.4",
     "mongoose": "^7.4.3",
     "morgan": "^1.10.0",
+    "multer": "^2.0.2",
     "nodemailer": "^6.7.2",
     "passport": "^0.6.0",
     "passport-jwt": "^4.0.0",

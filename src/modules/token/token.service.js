@@ -1,11 +1,11 @@
 import jwt from 'jsonwebtoken';
-import moment, { Moment } from 'moment';
+import moment from 'moment';
 import mongoose from 'mongoose';
 import httpStatus from 'http-status';
-import config from '../../config/config';
-import Token from './token.model';
-import ApiError from '../errors/ApiError';
-import { userService } from '../user';
+import config from '../../config/config.js';
+import Token from './token.model.js';
+import ApiError from '../errors/ApiError.js';
+import { userService } from '../user/index.js';
 
 /**
  * Generate token

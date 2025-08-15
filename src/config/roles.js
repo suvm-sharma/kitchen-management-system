@@ -1,10 +1,23 @@
 const allRoles = {
-  user: ['manageStaff', 'getStaff', 'manageUsers', 'getUsers', 'getRole'],
-  admin: ['getUsers', 'manageUsers', 'getStaff', 'getRole'],
+  user: ['getUsers', 'manageUsers', 'manageStaff'],
+  superAdmin: [
+    'manageMenu',
+    'getMenu',
+    'getMenuCategories',
+    'manageMenuCategories',
+    'menuIngredients',
+    'getMenuIngredients',
+    'manageRestaurant',
+    'getRestaurant',
+    'getRole',
+    'manageRole',
+    'manageStaff',
+    'getStaff',
+  ],
 };
 
-export const roles: string[] = Object.keys(allRoles); // [ 'user', 'admin', 'staffUser', 'superAdmin' ]
-export const roleRights: Map<string, string[]> = new Map(Object.entries(allRoles));
+export const roles = Object.keys(allRoles); // [ 'user', 'admin', 'staffUser', 'superAdmin' ]
+export const roleRights = new Map(Object.entries(allRoles));
 
 /* roleRights:- 
   'user' => [ 'getUsers', 'manageUsers', 'manageStaff' ],

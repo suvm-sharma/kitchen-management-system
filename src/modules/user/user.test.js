@@ -4,12 +4,12 @@ import request from 'supertest';
 import { faker } from '@faker-js/faker';
 import httpStatus from 'http-status';
 import moment from 'moment';
-import config from '../../config/config';
-import tokenTypes from '../token/token.types';
-import * as tokenService from '../token/token.service';
-import app from '../../app';
-import setupTestDB from '../jest/setupTestDB';
-import User from './user.model';
+import config from '../../config/config.js';
+import tokenTypes from '../token/token.types.js';
+import * as tokenService from '../token/token.service.js';
+import app from '../../app.js';
+import setupTestDB from '../jest/setupTestDB.js';
+import User from './user.model.test.js';
 
 setupTestDB();
 

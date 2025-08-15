@@ -1,6 +1,5 @@
 import Joi from 'joi';
-import { password } from '../validate/custom.validation';
-import { NewRegisteredUser } from '../user/user.interfaces';
+import { password } from '../validate/custom.validation.js';
 
 const registerBody = {
   email: Joi.string().required().email(),

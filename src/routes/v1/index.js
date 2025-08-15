@@ -1,15 +1,15 @@
 import express, { Router } from 'express';
-import authRoute from './auth.route';
-import docsRoute from './swagger.route';
-import userRoute from './user.route';
-import config from '../../config/config';
-import menuCategoriesRoute from './menuCategories.route';
-import menuRoute from './menu.route';
-import staffRoute from './staff.route';
-import roleRoute from './role.route';
-import restaurantRoute from './restaurant.route';
-import menuIngredientsRoute from './menuIngredients.route';
-import staffAuthRoute from './staffAuth.route';
+import authRoute from './auth.route.js';
+import docsRoute from './swagger.route.js';
+import userRoute from './user.route.js';
+import config from '../../config/config.js';
+import menuCategoriesRoute from './menuCategories.route.js';
+import menuRoute from './menu.route.js';
+import staffRoute from './staff.route.js';
+import roleRoute from './role.route.js';
+import restaurantRoute from './restaurant.route.js';
+import menuIngredientsRoute from './menuIngredients.route.js';
+import staffAuthRoute from './staffAuth.route.js';
 
 const router = express.Router();
 

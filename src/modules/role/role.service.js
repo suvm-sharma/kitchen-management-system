@@ -1,5 +1,5 @@
-import Role from './role.model';
-import { ApiError } from '../errors';
+import Role from './role.model.js';
+import { ApiError } from '../errors/index.js';
 import httpStatus from 'http-status';
 
 export const createRole = async (createRole) => {

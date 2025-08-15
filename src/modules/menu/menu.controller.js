@@ -1,10 +1,9 @@
-import { catchAsync, pick } from '../utils';
-import * as menuService from './menu.service';
+import { catchAsync, pick } from '../utils/index.js';
+import * as menuService from './menu.service.js';
 import httpStatus from 'http-status';
-import { IOptions } from '../paginate/paginate';
 import mongoose from 'mongoose';
-import { ApiError } from '../errors';
-import { checkIfHasAccess } from '../utils';
+import { ApiError } from '../errors/index.js';
+import { checkIfHasAccess } from '../utils/index.js';
 
 export const createMenu = catchAsync(async (req, res) => {
   checkIfHasAccess(req.body, req.staff);
@@ -20,7 +19,6 @@ export const getMenu = catchAsync(async (req, res) => {
   // }
   const options = await pick(req.query, ['sortBy', 'projectBy', 'limit', 'page']);
   const result = await menuService.getMenu(filter, options);
-
   res.send(result);
 });
 

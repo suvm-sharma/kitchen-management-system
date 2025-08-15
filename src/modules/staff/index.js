@@ -1,7 +1,6 @@
-import * as staffInterface from './staff.interface';
-import staff from './staff.model';
-import * as staffController from './staff.controller';
-import * as staffService from './staff.service';
-import * as staffValidation from './staff.validation';
+import staff from './staff.model.js';
+import * as staffController from './staff.controller.js';
+import * as staffService from './staff.service.js';
+import * as staffValidation from './staff.validation.js';
 
-export { staffInterface, staff, staffController, staffService, staffValidation };
+export { staff, staffController, staffService, staffValidation };

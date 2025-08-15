@@ -1,7 +1,6 @@
-import * as roleInterface from './role.interface';
-import role from './role.model';
-import * as roleController from './role.controller';
-import * as roleService from './role.service';
-import * as roleValidation from './role.validation';
+import role from './role.model.js';
+import * as roleController from './role.controller.js';
+import * as roleService from './role.service.js';
+import * as roleValidation from './role.validation.js';
 
-export { roleInterface, role, roleController, roleService, roleValidation };
+export { role, roleController, roleService, roleValidation };

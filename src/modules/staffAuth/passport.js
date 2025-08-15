@@ -1,7 +1,7 @@
 import { ExtractJwt, Strategy as JwtStrategy } from 'passport-jwt';
-import tokenTypes from '../staffToken/staffToken.types';
-import config from '../../config/config';
-import Staff from '../staff/staff.model';
+import tokenTypes from '../staffToken/staffToken.types.js';
+import config from '../../config/config.js';
+import Staff from '../staff/staff.model.js';
 
 const staffJwtStrategy = new JwtStrategy(
   {

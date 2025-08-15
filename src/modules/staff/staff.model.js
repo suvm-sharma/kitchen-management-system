@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 import validator from 'validator';
 import bcrypt from 'bcryptjs';
-import toJSON from '../toJSON/toJSON';
-import { paginate } from '../paginate';
+import toJSON from '../toJSON/toJSON.js';
+import { paginate } from '../paginate/index.js';
 
 const staffSchema = new mongoose.Schema(
   {

@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { password, objectId } from '../validate/custom.validation';
+import { password, objectId } from '../validate/custom.validation.js';
 
 const createUserBody = {
   email: Joi.string().required().email(),

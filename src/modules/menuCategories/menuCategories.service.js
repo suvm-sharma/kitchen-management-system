@@ -1,5 +1,5 @@
-import MenuCategories from './menuCategories.model';
-import { ApiError } from '../errors';
+import MenuCategories from './menuCategories.model.js';
+import { ApiError } from '../errors/index.js';
 import httpStatus from 'http-status';
 
 export const createMenuCategories = async (createMenuCategories) => {

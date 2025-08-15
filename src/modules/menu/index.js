@@ -1,7 +1,6 @@
-import * as menuInterface from './menu.interface';
-import menu from './menu.model';
-import * as menuController from './menu.controller';
-import * as menuService from './menu.service';
-import * as menuValidation from './menu.validation';
+import menu from './menu.model.js';
+import * as menuController from './menu.controller.js';
+import * as menuService from './menu.service.js';
+import * as menuValidation from './menu.validation.js';
 
-export { menuInterface, menu, menuController, menuService, menuValidation };
+export { menu, menuController, menuService, menuValidation };

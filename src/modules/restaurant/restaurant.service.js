@@ -1,9 +1,37 @@
-import Restaurant from './restaurant.model';
-import { ApiError } from '../errors';
+import Restaurant from './restaurant.model.js';
+import { ApiError } from '../errors/index.js';
 import httpStatus from 'http-status';
+import { uploadFileToAws } from '../utils/index.js';
 
-export const createRestaurant = async (createRestaurant) => {
-  return await Restaurant.create(createRestaurant);
+export const createRestaurant = async (req) => {
+  let restaurantImageUrl = null;
+  let restaurantLogoUrl = null;
+
+  // Upload restaurant image to S3
+  if (req.files && Array.isArray(req.files.restaurantImage) && req.files.restaurantImage.length > 0) {
+    const file = req.files.restaurantImage[0];
+    const uploadResult = await uploadFileToAws({
+      buffer: file.buffer,
+      mimetype: file.mimetype,
+    });
+    restaurantImageUrl = uploadResult['url'];
+  }
+
+  // Upload logo to S3
+  if (req.files && Array.isArray(req.files.logo) && req.files.logo.length > 0) {
+    const file = req.files.logo[0];
+    const uploadResult = await uploadFileToAws({
+      buffer: file.buffer,
+      mimetype: file.mimetype,
+    });
+    restaurantLogoUrl = uploadResult['url'];
+  }
+
+  return await Restaurant.create({
+    ...req.body,
+    restaurantImage: restaurantImageUrl,
+    logo: restaurantLogoUrl,
+  });
 };
 
 export const getRestaurant = async (filter, options) => {

@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import { QueryResult } from '../paginate/paginate';
-import Staff from './staff.model';
-import { ApiError } from '../errors';
+import QueryResult from '../paginate/paginate.js';
+import Staff from './staff.model.js';
+import { ApiError } from '../errors/index.js';
 import httpStatus from 'http-status';
 
 /**

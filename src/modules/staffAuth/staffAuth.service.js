@@ -1,10 +1,10 @@
 import httpStatus from 'http-status';
 import mongoose from 'mongoose';
-import StaffToken from '../staffToken/staffToken.model';
-import ApiError from '../errors/ApiError';
-import tokenTypes from '../staffToken/staffToken.types';
-import { getStaffByEmail, getStaffById, updateStaff } from '../staff/staff.service';
-import { verifyToken } from '../staffToken/staffToken.service';
+import StaffToken from '../staffToken/staffToken.model.js';
+import ApiError from '../errors/ApiError.js';
+import tokenTypes from '../staffToken/staffToken.types.js';
+import { getStaffByEmail, getStaffById, updateStaff } from '../staff/staff.service.js';
+import { verifyToken } from '../staffToken/staffToken.service.js';
 
 /**
  * Login with email and password

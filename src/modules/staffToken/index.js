@@ -1,6 +1,5 @@
-import * as tokenService from './staffToken.service';
-import StaffToken from './staffToken.model';
-import * as tokenInterfaces from './staffToken.interfaces';
-import tokenTypes from './staffToken.types';
+import * as tokenService from './staffToken.service.js';
+import StaffToken from './staffToken.model.js';
+import tokenTypes from './staffToken.types.js';
 
-export { tokenService, StaffToken, tokenInterfaces, tokenTypes };
+export { tokenService, StaffToken, tokenTypes };

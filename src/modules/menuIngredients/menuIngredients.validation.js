@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { objectId } from '../validate';
+import { objectId } from '../validate/index.js';
 
 const createMenuIngredients = {
   name: Joi.string().required(),

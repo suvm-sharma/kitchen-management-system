@@ -1,9 +1,9 @@
 import httpStatus from 'http-status';
-import catchAsync from '../utils/catchAsync';
-import { tokenService } from '../staffToken';
-import { staffService } from '../staff';
-import * as staffAuthService from './staffAuth.service';
-import { emailService } from '../email';
+import catchAsync from '../utils/catchAsync.js';
+import { tokenService } from '../staffToken/index.js';
+import { staffService } from '../staff/index.js';
+import * as staffAuthService from './staffAuth.service.js';
+import { emailService } from '../email/index.js';
 
 export const register = catchAsync(async (req, res) => {
   const staff = await staffService.registerStaff(req.body);

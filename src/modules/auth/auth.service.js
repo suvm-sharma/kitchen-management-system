@@ -1,10 +1,10 @@
 import httpStatus from 'http-status';
 import mongoose from 'mongoose';
-import Token from '../token/token.model';
-import ApiError from '../errors/ApiError';
-import tokenTypes from '../token/token.types';
-import { getUserByEmail, getUserById, updateUserById } from '../user/user.service';
-import { generateAuthTokens, verifyToken } from '../token/token.service';
+import Token from '../token/token.model.js';
+import ApiError from '../errors/ApiError.js';
+import tokenTypes from '../token/token.types.js';
+import { getUserByEmail, getUserById, updateUserById } from '../user/user.service.js';
+import { generateAuthTokens, verifyToken } from '../token/token.service.js';
 
 export const loginUserWithEmailAndPassword = async (email, password) => {
   const user = await getUserByEmail(email);

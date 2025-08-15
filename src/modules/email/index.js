@@ -1,4 +1,3 @@
-import * as emailInterfaces from './email.interfaces';
-import * as emailService from './email.service';
+import * as emailService from './email.service.js';
 
-export { emailInterfaces, emailService };
+export { emailService };

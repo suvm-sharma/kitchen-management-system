@@ -1,8 +1,7 @@
-import { Request, Response, NextFunction } from 'express';
 import Joi from 'joi';
 import httpStatus from 'http-status';
-import pick from '../utils/pick';
-import ApiError from '../errors/ApiError';
+import pick from '../utils/pick.js';
+import ApiError from '../errors/ApiError.js';
 
 const validate = (schema) => (req, _res, next) => {
   const validSchema = pick(schema, ['params', 'query', 'body']);

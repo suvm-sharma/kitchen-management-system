@@ -1,14 +1,22 @@
 import express from 'express';
-import { validate } from '../../modules/validate';
-import { restaurantController, restaurantValidation } from '../../modules/restaurant/index';
-import { staffAuth } from '../../modules/staffAuth';
+import multer from 'multer';
+import { validate } from '../../modules/validate/index.js';
+import { restaurantController, restaurantValidation } from '../../modules/restaurant/index.js';
+import { staffAuth } from '../../modules/staffAuth/index.js';
 
 const router = express.Router();
+
+// File upload config
+const upload = multer({ storage: multer.memoryStorage() });
 
 router
   .route('/')
   .post(
     staffAuth('manageRestaurant'),
+    upload.fields([
+      { name: 'restaurantImage', maxCount: 1 },
+      { name: 'logo', maxCount: 1 },
+    ]),
     validate(restaurantValidation.creRestaurantBody),
     restaurantController.createRestaurant
   )

@@ -1,6 +1,7 @@
-import catchAsync from './catchAsync';
-import pick from './pick';
-import authLimiter from './rateLimiter';
-import checkIfHasAccess from './checkIfHasAccess';
+import catchAsync from './catchAsync.js';
+import pick from './pick.js';
+import authLimiter from './rateLimiter.js';
+import checkIfHasAccess from './checkIfHasAccess.js';
+import { uploadFileToAws } from './awsS3Helper.js';
 
-export { catchAsync, pick, authLimiter, checkIfHasAccess };
+export { catchAsync, pick, authLimiter, checkIfHasAccess, uploadFileToAws };

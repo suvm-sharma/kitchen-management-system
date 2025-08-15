@@ -1,4 +1,4 @@
-import express, { Express } from 'express';
+import express from 'express';
 import helmet from 'helmet';
 import xss from 'xss-clean';
 import ExpressMongoSanitize from 'express-mongo-sanitize';
@@ -6,13 +6,13 @@ import compression from 'compression';
 import cors from 'cors';
 import passport from 'passport';
 import httpStatus from 'http-status';
-import config from './config/config';
-import { morgan } from './modules/logger';
-// import { jwtStrategy } from './modules/auth';
-import { jwtStrategy } from './modules/staffAuth';
-import { authLimiter } from './modules/utils';
-import { ApiError, errorConverter, errorHandler } from './modules/errors';
-import routes from './routes/v1';
+import config from './config/config.js';
+import { morgan } from './modules/logger/index.js';
+// import { jwtStrategy } from './modules/auth/index.js';
+import { jwtStrategy } from './modules/staffAuth/index.js';
+import { authLimiter } from './modules/utils/index.js';
+import { ApiError, errorConverter, errorHandler } from './modules/errors/index.js';
+import routes from './routes/v1/index.js';
 
 const app = express();
 

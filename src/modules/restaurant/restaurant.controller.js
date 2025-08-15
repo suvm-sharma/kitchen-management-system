@@ -1,11 +1,11 @@
-import { catchAsync, pick } from '../utils';
-import * as restaurantService from './restaurant.service';
+import { catchAsync, pick } from '../utils/index.js';
+import * as restaurantService from './restaurant.service.js';
 import httpStatus from 'http-status';
 import mongoose from 'mongoose';
-import { ApiError } from '../errors';
+import { ApiError } from '../errors/index.js';
 
 export const createRestaurant = catchAsync(async (req, res) => {
-  const restaurant = await restaurantService.createRestaurant(req.body);
+  const restaurant = await restaurantService.createRestaurant(req);
   res.status(httpStatus.CREATED).send(restaurant);
 });
 

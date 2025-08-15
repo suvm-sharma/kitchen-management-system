@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import mongoose from 'mongoose';
 import httpStatus from 'http-status';
-import config from '../../config/config';
-import { logger } from '../logger';
-import ApiError from './ApiError';
+import config from '../../config/config.js';
+import { logger } from '../logger/index.js';
+import ApiError from './ApiError.js';
 
 export const errorConverter = (err, _req, _res, next) => {
   let error = err;

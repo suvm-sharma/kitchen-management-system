@@ -1,13 +1,6 @@
-import * as menuIngredientsInterface from './menuIngredients.interface';
-import menuIngredients from './menuIngredients.model';
-import * as menuIngredientsController from './menuIngredients.controller';
-import * as menuIngredientsService from './menuIngredients.service';
-import * as menuIngredientsValidation from './menuIngredients.validation';
+import menuIngredients from './menuIngredients.model.js';
+import * as menuIngredientsController from './menuIngredients.controller.js';
+import * as menuIngredientsService from './menuIngredients.service.js';
+import * as menuIngredientsValidation from './menuIngredients.validation.js';
 
-export {
-  menuIngredientsInterface,
-  menuIngredients,
-  menuIngredientsController,
-  menuIngredientsService,
-  menuIngredientsValidation,
-};
+export { menuIngredients, menuIngredientsController, menuIngredientsService, menuIngredientsValidation };

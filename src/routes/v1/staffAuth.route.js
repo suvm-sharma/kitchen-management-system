@@ -1,6 +1,6 @@
 import express from 'express';
-import { validate } from '../../modules/validate';
-import { staffAuthValidation, staffAuthController } from '../../modules/staffAuth';
+import { validate } from '../../modules/validate/index.js';
+import { staffAuthValidation, staffAuthController } from '../../modules/staffAuth/index.js';
 
 const router = express.Router();
 

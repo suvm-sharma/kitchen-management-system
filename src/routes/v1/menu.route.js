@@ -1,7 +1,7 @@
 import express from 'express';
-import { validate } from '../../modules/validate';
-import { menuController, menuValidation } from '../../modules/menu/index';
-import { staffAuth } from '../../modules/staffAuth';
+import { validate } from '../../modules/validate/index.js';
+import { menuController, menuValidation } from '../../modules/menu/index.js';
+import { staffAuth } from '../../modules/staffAuth/index.js';
 
 const router = express.Router();
 

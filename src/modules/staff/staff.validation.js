@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { password, objectId } from '../validate';
+import { password, objectId } from '../validate/index.js';
 
 const createStaffBody = {
   firstName: Joi.string().required(),

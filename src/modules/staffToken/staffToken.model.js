@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
-import tokenTypes from './staffToken.types';
-import toJSON from '../toJSON/toJSON';
+import tokenTypes from './staffToken.types.js';
+import toJSON from '../toJSON/toJSON.js';
 
 const tokenSchema = new mongoose.Schema(
   {
